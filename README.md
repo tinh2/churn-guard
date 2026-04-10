@@ -173,9 +173,20 @@ All templates use `{{handlebars_style}}` placeholder variables for personalizati
 
 ## Deployment
 
-### API
+### API (Fly.io)
 
-Deploy to any Node.js host (Railway, Fly.io, Render). Set all env vars listed above.
+Deploy to Fly.io: `~/git/deploy-apis.sh` after `flyctl auth login`
+
+```bash
+flyctl auth login
+~/git/deploy-apis.sh
+```
+
+Set secrets after deploy:
+
+```bash
+flyctl secrets set STRIPE_SECRET_KEY=xxx ANTHROPIC_API_KEY=xxx --app churnguard-api
+```
 
 ### Web
 
@@ -184,7 +195,7 @@ Deploy to Vercel: `vercel --prod` from `apps/web/`.
 ### Stripe webhooks (production)
 
 Register your production webhook URL in the Stripe dashboard:
-`https://api.yourdomain.com/webhooks/stripe`
+`https://churnguard-api.fly.dev/webhooks/stripe`
 
 Events to subscribe to:
 
