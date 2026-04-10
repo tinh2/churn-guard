@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>You left something behind</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+        background-color: #f3f4f6;
+        color: #111827;
+      }
+      .wrapper {
+        max-width: 560px;
+        margin: 48px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: #111827;
+        padding: 32px 40px;
+        text-align: center;
+      }
+      .header .logo {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .header .logo span {
+        color: #22c55e;
+      }
+      .body {
+        padding: 40px;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 800;
+        margin: 0 0 20px;
+        color: #111827;
+        line-height: 1.3;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #374151;
+        margin: 0 0 16px;
+      }
+      .cta {
+        display: block;
+        margin: 28px 0;
+        background: #22c55e;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        padding: 14px 28px;
+        border-radius: 10px;
+      }
+      .footer {
+        background: #f9fafb;
+        padding: 24px 40px;
+        font-size: 12px;
+        color: #9ca3af;
+        text-align: center;
+        border-top: 1px solid #e5e7eb;
+      }
+      .footer a {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">Churn<span>Guard</span></div>
+      </div>
+      <div class="body">
+        <h1>We miss you — and we saved your spot.</h1>
+        <p>Hi {{customer_first_name}},</p>
+        <p>
+          You recently cancelled your {{product_name}} subscription and we
+          completely respect that. But before your account goes fully dark, we
+          wanted to reach out once.
+        </p>
+        <p>
+          If the price was the issue, we have a lighter plan at
+          <strong>{{discounted_price}}/month</strong> that covers the core
+          features most solo users actually need. No fluff.
+        </p>
+        <p>
+          If something else wasn't working, reply and tell us. You'd be helping
+          the next person who runs into the same thing.
+        </p>
+        <a href="{{reactivate_url}}" class="cta">Come back — first month 50% off</a>
+        <p>
+          If now isn't the right time, we get it. You can reactivate anytime —
+          your data will be here waiting for you for the next 90 days.
+        </p>
+        <p>— The {{company_name}} team</p>
+      </div>
+      <div class="footer">
+        <p>
+          One-time email. We won't spam you.<br />
+          <a href="{{unsubscribe_url}}">Unsubscribe</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

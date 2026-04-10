@@ -1,0 +1,29 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
+          700: "#15803d",
+        },
+      },
+      fontFamily: {
+        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

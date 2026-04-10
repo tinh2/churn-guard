@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Still there? We saved some things for you.</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+        background-color: #f3f4f6;
+        color: #111827;
+      }
+      .wrapper {
+        max-width: 560px;
+        margin: 48px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: #111827;
+        padding: 32px 40px;
+        text-align: center;
+      }
+      .header .logo {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      .header .logo span {
+        color: #22c55e;
+      }
+      .body {
+        padding: 40px;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 800;
+        margin: 0 0 20px;
+        color: #111827;
+        line-height: 1.3;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #374151;
+        margin: 0 0 16px;
+      }
+      .feature-list {
+        margin: 16px 0 24px;
+        padding: 0;
+        list-style: none;
+      }
+      .feature-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: #374151;
+        margin-bottom: 10px;
+      }
+      .feature-list li::before {
+        content: "→";
+        color: #22c55e;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .cta {
+        display: block;
+        margin: 28px 0;
+        background: #22c55e;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        padding: 14px 28px;
+        border-radius: 10px;
+      }
+      .footer {
+        background: #f9fafb;
+        padding: 24px 40px;
+        font-size: 12px;
+        color: #9ca3af;
+        text-align: center;
+        border-top: 1px solid #e5e7eb;
+      }
+      .footer a {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">Churn<span>Guard</span></div>
+      </div>
+      <div class="body">
+        <h1>Still there, {{customer_first_name}}? We've been adding things you might care about.</h1>
+        <p>
+          It's been {{days_inactive}} days since you last logged into
+          {{product_name}} and we noticed. We're not going to guilt-trip you —
+          life gets busy and sometimes tools fall off your radar.
+        </p>
+        <p>
+          But a few things have shipped since you were last active that might
+          change the equation:
+        </p>
+        <ul class="feature-list">
+          <li>{{new_feature_1}}</li>
+          <li>{{new_feature_2}}</li>
+          <li>{{new_feature_3}}</li>
+        </ul>
+        <p>
+          If any of those hit a problem you're sitting on, it might be worth
+          a 10-minute look. Your account and all your data are exactly where
+          you left them.
+        </p>
+        <a href="{{login_url}}" class="cta">Log back in →</a>
+        <p>
+          And if {{product_name}} just isn't the right fit right now, no hard
+          feelings — hit reply and I'll make sure your cancellation is handled
+          cleanly with no questions asked.
+        </p>
+        <p>— {{founder_name}}, {{company_name}}</p>
+      </div>
+      <div class="footer">
+        <p>
+          You're receiving this because you haven't logged in for
+          {{days_inactive}} days.<br />
+          <a href="{{unsubscribe_url}}">Unsubscribe from re-engagement emails</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
